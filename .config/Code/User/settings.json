@@ -1,0 +1,102 @@
+{
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": "~/.github/copilot-instructions.md"
+    }
+  ],
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.productIconTheme": "bootstrap-product-icons",
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "vim.smartRelativeLine": true,
+  "editor.cursorSurroundingLines": 8,
+
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["m", "m"],
+      "commands": ["editor.action.jumpToBracket"]
+    },
+    {
+      "before": ["leader", "f", "r"],
+      "commands": ["find-it-faster.findWithinFiles"]
+    },
+    {
+      "before": ["g", "p", "d"],
+      "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "p", "i"],
+      "commands": ["editor.action.peekImplementation"]
+    },
+    {
+      "before": ["g", "q"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["g", "p", "t"],
+      "commands": ["editor.action.peekTypeDefinition"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["L"],
+      "commands": ["workbench.action.nextEditorInGroup"]
+    },
+    {
+      "before": ["H"],
+      "commands": ["workbench.action.previousEditorInGroup"]
+    }
+  ],
+  "vim.leader": "<space>",
+
+  "vim.useSystemClipboard": true,
+  "terminal.external.linuxExec": "alacritty",
+  "editor.fontVariations": false,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "git.autofetch": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "go": false
+  },
+  "terminal.integrated.gpuAcceleration": "on",
+  "window.titleBarStyle": "custom",
+  "terminal.integrated.inheritEnv": false,
+  "docker.extension.dockerEngineAvailabilityPrompt": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "go.toolsManagement.autoUpdate": true,
+  "C_Cpp.default.cppStandard": "c++26",
+  "helixKeymap.toggleRelativeLineNumbers": true,
+  "python.defaultInterpreterPath": "/bin/python",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "lyceumCloud.token": "lk_62975688cb0fe0a2f5106f36871a58459c424f4493bb1339bb78cc444312db57",
+  "makefile.configureOnOpen": true
+}

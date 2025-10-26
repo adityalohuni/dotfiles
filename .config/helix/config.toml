@@ -1,0 +1,17 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+# mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+# [editor.file-picker]
+# hidden = false
+
+[editor.lsp]
+enable = true

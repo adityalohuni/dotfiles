@@ -1,0 +1,9 @@
+# ignore machine specific and secrets
+.local/
+.cache/
+env/
+*.env
+secrets/
+node_modules/
+__pycache__/
+.DS_Store

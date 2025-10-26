@@ -1,0 +1,292 @@
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* Dark Glass color scheme — Waybar-friendly, compact, readable
+   Font: Inter (preferred) → Roboto → Noto Sans → system
+   Only Waybar-safe properties (RGBA, borders, padding, gradients kept minimal)
+*/
+
+* {
+  font-family: "Inter", "Roboto", "Noto Sans", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* Palette:
+   glass: rgba(11, 15, 19, 0.78)
+   panel tint: rgba(24, 34, 44, 0.46)
+   primary text: #ECEFF4
+   muted: #9AA6B2
+   blue accent: rgba(110,168,255,0.16)
+   cyan accent: rgba(143,188,187,0.10)
+   green accent: rgba(163,190,140,0.12)
+   orange accent: rgba(208,135,112,0.12)
+   red accent: rgba(191,97,106,0.14)
+*/
+
+/* Root window / background */
+window {
+  background-color: transparent;
+  border-radius: 10px;
+  color: #eceff4;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 3px 6px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+  border: none;
+}
+
+/* Compact buttons */
+button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 2px 6px;
+  color: #eceff4;
+  font-weight: 400;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Pulseaudio hover (warm) */
+#pulseaudio:hover {
+  background-color: rgba(208, 135, 112, 0.12);
+  border-color: rgba(208, 135, 112, 0.1);
+}
+
+/* Workspaces — compact */
+#workspaces button {
+  padding: 0 0.45em;
+  margin: 0 0.14em;
+  border-radius: 12px;
+  background: transparent;
+  color: #eceff4;
+  font-weight: 500;
+}
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+#workspaces button.active {
+  background-color: rgba(110, 168, 255, 0.16);
+  border: 1px solid rgba(110, 168, 255, 0.1);
+  color: #ffffff;
+  font-weight: 600;
+}
+#workspaces button.urgent {
+  background-color: rgba(191, 97, 106, 0.14);
+  border: 1px solid rgba(191, 97, 106, 0.12);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Mode pill */
+#mode {
+  padding: 3px 8px;
+  border-radius: 12px;
+  background-color: rgba(110, 168, 255, 0.12);
+  border: 1px solid rgba(110, 168, 255, 0.08);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Common modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd,
+#language,
+#workspaces button,
+button {
+  padding: 2px 8px;
+  color: #eceff4;
+  font-weight: 400;
+  margin: 0 2px;
+}
+
+/* Muted / secondary text */
+.value,
+.muted,
+.subtitle {
+  color: #9aa6b2;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* Light/tinted pills */
+#mpd,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#temperature {
+  color: #2e3440;
+  font-weight: 500;
+}
+
+/* Power profiles */
+#power-profiles-daemon.performance {
+  background-color: rgba(191, 97, 106, 0.14);
+  border: 1px solid rgba(191, 97, 106, 0.1);
+  color: #ffffff;
+}
+#power-profiles-daemon.balanced {
+  background-color: rgba(143, 188, 187, 0.1);
+  border: 1px solid rgba(143, 188, 187, 0.08);
+  color: #2e3440;
+}
+#power-profiles-daemon.power-saver {
+  background-color: rgba(163, 190, 140, 0.12);
+  border: 1px solid rgba(163, 190, 140, 0.08);
+  color: #2e3440;
+}
+
+/* Temperature states */
+#temperature {
+  padding: 2px 6px;
+  color: rgba(235, 203, 239, 0.66);
+}
+#temperature.critical {
+  color: rgba(191, 97, 106, 0.66);
+}
+
+/* MPD / media */
+#mpd {
+  background-color: rgba(143, 188, 187, 0.1);
+  color: #2e3440;
+  padding: 2px 6px;
+}
+#mpd.disconnected {
+  background-color: rgba(191, 97, 106, 0.12);
+  color: #ffffff;
+}
+#mpd.stopped {
+  background-color: rgba(76, 86, 106, 0.08);
+  color: #eceff4;
+}
+#mpd.paused {
+  background-color: rgba(110, 168, 255, 0.06);
+  color: #2e3440;
+}
+
+/* Groups */
+.modules-left,
+#buses,
+#hardware,
+#locale {
+  border-radius: 12px;
+  padding: 2px 12px;
+  background-color: rgba(15, 22, 28, 0.56);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Network & audio */
+#network {
+  color: #eceff4;
+}
+#network.disconnected {
+  color: rgba(191, 97, 106, 1);
+}
+#pulseaudio {
+  color: #eceff4;
+}
+#pulseaudio.muted {
+  color: rgba(255, 255, 255, 0.9);
+}
+#wireplumber {
+  color: #9aa6b2;
+}
+#wireplumber.muted {
+  color: rgba(191, 97, 106, 1);
+}
+
+/* Custom media colors */
+#custom-media.custom-spotify {
+  color: rgba(143, 188, 187, 1);
+}
+#custom-media.custom-vlc {
+  color: rgba(208, 135, 112, 1);
+}
+
+/* Battery states */
+#battery {
+  color: #eceff4;
+}
+#battery.charging,
+#battery.plugged {
+  color: #2e3440;
+}
+#battery.critical:not(.charging) {
+  color: #ffffff;
+}
+
+/* Tray */
+#tray {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 2px 10px;
+  color: #eceff4;
+  font-weight: 400;
+  background-color: rgba(16, 20, 24, 0.52);
+}
+
+/* Locale, clock, keyboard */
+#clock {
+  font-weight: 600;
+  font-size: 12.5px;
+  color: #ffffff;
+  padding: 2px 6px;
+}
+#language {
+  padding: 0 6px;
+  margin: 0 4px;
+  min-width: 16px;
+  color: #eceff4;
+}
+#keyboard-state > label.locked {
+  background: rgba(46, 52, 64, 0.6);
+  padding: 1px 6px;
+  border-radius: 12px;
+  color: #eceff4;
+}
+
+/* Scratchpad / privacy */
+#scratchpad {
+  background: rgba(11, 15, 19, 0.66);
+}
+#scratchpad.empty {
+  background-color: transparent;
+}
+
+#privacy-item {
+  padding: 0 6px;
+  color: #eceff4;
+  border-radius: 12px;
+}
+#privacy-item.screenshare {
+  background-color: rgba(208, 135, 112, 0.12);
+}
+#privacy-item.audio-in {
+  background-color: rgba(163, 190, 140, 0.12);
+}
+#privacy-item.audio-out {
+  background-color: rgba(143, 188, 187, 0.1);
+}
