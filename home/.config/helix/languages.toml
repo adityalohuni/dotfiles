@@ -1,0 +1,568 @@
+[[language]]
+name = "vue"
+auto-format = true
+scope = "source.vue"
+injection-regex = "vue"
+file-types = ["vue"]
+language-servers = [ "volar", "eslint"]
+formatter = {command = 'prettier', args= ["--parser", "vue"]}
+roots = ["package.json", "vue.config.js", ".prettierrc.json"]
+
+[language-server.volar]
+command = "vue-language-server"
+args = ["--stdio"]
+
+[language-server.volar.config]
+typescript = { tsdk = "./node_modules/typescript/lib" }
+
+[language-server]
+deno = { command = "deno", args = [ "lsp" ]}
+emmet-ls = { command = "emmet-ls", args = [ "--stdio" ]}
+
+[language-server.eslint]
+command = "vscode-eslint-language-server"
+args = ["--stdio"]
+
+[language-server.eslint.config]
+codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
+format = { enable = true }
+nodePath = ""
+quiet = false
+rulesCustomizations = []
+run = "onType"
+validate = "on"
+experimental = {}
+problems = { shortenToSingleLine = false }
+
+[language-server.eslint.config.codeAction]
+disableRuleComment = { enable = true, location = "separateLine" }
+showDocumentation = { enable = false }
+
+[language-server.vscode-json-language-server.config]
+json = { validate = { enable = true }, format = { enable = true } }
+provideFormatter = true
+
+[language-server.vscode-css-language-server.config]
+css = { validate = { enable = true } }
+scss = { validate = { enable = true } }
+less = { validate = { enable = true } }
+provideFormatter = true
+
+
+[[language]]
+name = "typescript"
+language-servers = [ "typescript-language-server", "eslint", "emmet-ls" ]
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+# formatter = { command = "dprint", args = [ "fmt", "--stdin", "typescript" ] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [ "deno", "eslint", "emmet-ls" ]
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+# formatter = { command = "dprint", args = [ "fmt", "--stdin", "tsx" ] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server", "eslint", "emmet-ls" ]
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+# formatter = { command = "dprint", args = [ "fmt", "--stdin", "javascript" ] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = [ "typescript-language-server", "eslint", "emmet-ls" ]
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+# formatter = { command = "dprint", args = [ "fmt", "--stdin", "jsx" ] }
+auto-format = true
+
+[[language]]
+name = "json"
+formatter = { command = "prettier", args = [ "--parser", "json" ] }
+# formatter = { command = "dprint", args = [ "fmt", "--stdin", "json" ] }
+auto-format = true
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "emmet-ls" ]
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "emmet-ls" ]
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+auto-format = true
+
+
+[language-server.wakatime-ls]
+command = "wakatime-ls"
+
+[[language]]
+name = "bash"
+language-servers = ["bash-language-server", "wakatime-ls"]
+
+[[language]]
+name = "c"
+language-servers = ["clangd", "wakatime-ls"]
+
+[[language]]
+name = "c-sharp"
+language-servers = ["omnisharp", "wakatime-ls"]
+
+[[language]]
+name = "clojure"
+language-servers = ["clojure-lsp", "wakatime-ls"]
+
+[[language]]
+name = "cmake"
+language-servers = ["neocmakelsp", "cmake-language-server", "wakatime-ls"]
+
+[[language]]
+name = "cpp"
+language-servers = ["clangd", "wakatime-ls"]
+
+[[language]]
+name = "crystal"
+language-servers = ["crystalline", "ameba-ls", "wakatime-ls"]
+
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server", "emmet-ls", "wakatime-ls"]
+
+[[language]]
+name = "csv"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "dart"
+language-servers = ["dart", "wakatime-ls"]
+
+[[language]]
+name = "docker-compose"
+language-servers = ["docker-compose-language-service", "yaml-language-server", "wakatime-ls"]
+
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-langserver", "wakatime-ls"]
+
+[[language]]
+name = "elixir"
+language-servers = ["elixir-ls", "wakatime-ls"]
+
+[[language]]
+name = "env"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "erlang"
+language-servers = ["erlang-ls", "elp", "wakatime-ls"]
+
+[[language]]
+name = "fortran"
+language-servers = ["fortls", "wakatime-ls"]
+
+[[language]]
+name = "fsharp"
+language-servers = ["fsharp-ls", "wakatime-ls"]
+
+[[language]]
+name = "gdscript"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "gjs"
+language-servers = ["typescript-language-server", "vscode-eslint-language-server", "ember-language-server", "wakatime-ls"]
+
+[[language]]
+name = "gleam"
+language-servers = ["gleam", "wakatime-ls"]
+
+[[language]]
+name = "glimmer"
+language-servers = ["ember-language-server", "wakatime-ls"]
+
+[[language]]
+name = "glsl"
+language-servers = ["glsl_analyzer", "wakatime-ls"]
+
+[[language]]
+name = "go"
+language-servers = ["gopls", "golangci-lint-langserver", "wakatime-ls"]
+
+[[language]]
+name = "godot-resource"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "gomod"
+language-servers = ["gopls", "wakatime-ls"]
+
+[[language]]
+name = "gotmpl"
+language-servers = ["gopls", "wakatime-ls"]
+
+[[language]]
+name = "gowork"
+language-servers = ["gopls", "wakatime-ls"]
+
+[[language]]
+name = "haskell"
+language-servers = ["haskell-language-server", "wakatime-ls"]
+
+[[language]]
+name = "haskell-persistent"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "helm"
+language-servers = ["helm_ls", "wakatime-ls"]
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "emmet-ls", "wakatime-ls"]
+
+[[language]]
+name = "htmldjango"
+language-servers = ["djlint", "vscode-html-language-server", "superhtml", "wakatime-ls"]
+
+[[language]]
+name = "java"
+language-servers = ["jdtls", "wakatime-ls"]
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server", "eslint", "emmet-ls", "wakatime-ls"]
+
+[[language]]
+name = "jsdoc"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server", "wakatime-ls"]
+
+[[language]]
+name = "json-ld"
+language-servers = ["vscode-json-language-server", "wakatime-ls"]
+
+[[language]]
+name = "json5"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "jsonc"
+language-servers = ["vscode-json-language-server", "wakatime-ls"]
+
+[[language]]
+name = "jsonnet"
+language-servers = ["jsonnet-language-server", "wakatime-ls"]
+
+[[language]]
+name = "jsx"
+language-servers = ["typescript-language-server", "eslint", "emmet-ls", "wakatime-ls"]
+
+[[language]]
+name = "julia"
+language-servers = ["julia", "wakatime-ls"]
+
+[[language]]
+name = "just"
+language-servers = ["just-lsp", "wakatime-ls"]
+
+[[language]]
+name = "kotlin"
+language-servers = ["kotlin-language-server", "wakatime-ls"]
+
+[[language]]
+name = "latex"
+language-servers = ["texlab", "wakatime-ls"]
+
+[[language]]
+name = "lua"
+language-servers = ["lua-language-server", "wakatime-ls"]
+
+[[language]]
+name = "luau"
+language-servers = ["luau", "wakatime-ls"]
+
+[[language]]
+name = "markdoc"
+language-servers = ["markdoc-ls", "wakatime-ls"]
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "markdown-oxide", "wakatime-ls"]
+
+[[language]]
+name = "meson"
+language-servers = ["mesonlsp", "wakatime-ls"]
+
+[[language]]
+name = "mint"
+language-servers = ["mint", "wakatime-ls"]
+
+[[language]]
+name = "mojo"
+language-servers = ["mojo-lsp-server", "wakatime-ls"]
+
+[[language]]
+name = "nasm"
+language-servers = ["asm-lsp", "wakatime-ls"]
+
+[[language]]
+name = "nix"
+language-servers = ["nil", "nixd", "wakatime-ls"]
+
+[[language]]
+name = "ocaml"
+language-servers = ["ocamllsp", "wakatime-ls"]
+
+[[language]]
+name = "ocaml-interface"
+language-servers = ["ocamllsp", "wakatime-ls"]
+
+[[language]]
+name = "odin"
+language-servers = ["ols", "wakatime-ls"]
+
+[[language]]
+name = "opencl"
+language-servers = ["clangd", "wakatime-ls"]
+
+[[language]]
+name = "openscad"
+language-servers = ["openscad-ls", "wakatime-ls"]
+
+[[language]]
+name = "pascal"
+language-servers = ["pasls", "wakatime-ls"]
+
+[[language]]
+name = "perl"
+language-servers = ["perlnavigator", "wakatime-ls"]
+
+[[language]]
+name = "php"
+language-servers = ["intelephense", "wakatime-ls"]
+
+[[language]]
+name = "php-only"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "pkgbuild"
+language-servers = ["termux-language-server", "bash-language-server", "wakatime-ls"]
+
+[[language]]
+name = "pkl"
+language-servers = ["pkl-lsp", "wakatime-ls"]
+
+[[language]]
+name = "prisma"
+language-servers = ["prisma-language-server", "wakatime-ls"]
+
+[[language]]
+name = "prolog"
+language-servers = ["swipl", "wakatime-ls"]
+
+[[language]]
+name = "protobuf"
+language-servers = ["buf", "pbkit", "protols", "wakatime-ls"]
+
+[[language]]
+name = "purescript"
+language-servers = ["purescript-language-server", "wakatime-ls"]
+
+[[language]]
+name = "python"
+language-servers = ["ty", "ruff", "jedi", "pylsp", "wakatime-ls"]
+
+[[language]]
+name = "qml"
+language-servers = ["qmlls", "wakatime-ls"]
+
+[[language]]
+name = "quint"
+language-servers = ["quint-language-server", "wakatime-ls"]
+
+[[language]]
+name = "r"
+language-servers = ["r", "wakatime-ls"]
+
+[[language]]
+name = "racket"
+language-servers = ["racket", "wakatime-ls"]
+
+[[language]]
+name = "rego"
+language-servers = ["regols", "wakatime-ls"]
+
+[[language]]
+name = "rescript"
+language-servers = ["rescript-language-server", "wakatime-ls"]
+
+[[language]]
+name = "rmarkdown"
+language-servers = ["r", "wakatime-ls"]
+
+[[language]]
+name = "robot"
+language-servers = ["robotframework-lsp", "wakatime-ls"]
+
+[[language]]
+name = "ruby"
+language-servers = ["ruby-lsp", "solargraph", "wakatime-ls"]
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "wakatime-ls"]
+
+[[language]]
+name = "scala"
+language-servers = ["metals", "wakatime-ls"]
+
+[[language]]
+name = "scheme"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "scss"
+language-servers = ["vscode-css-language-server", "wakatime-ls"]
+
+[[language]]
+name = "slang"
+language-servers = ["slangd", "wakatime-ls"]
+
+[[language]]
+name = "slint"
+language-servers = ["slint-lsp", "wakatime-ls"]
+
+[[language]]
+name = "smithy"
+language-servers = ["cs", "wakatime-ls"]
+
+[[language]]
+name = "snakemake"
+language-servers = ["pylsp", "wakatime-ls"]
+
+[[language]]
+name = "solidity"
+language-servers = ["solc", "wakatime-ls"]
+
+[[language]]
+name = "sourcepawn"
+language-servers = ["sourcepawn-language-server", "wakatime-ls"]
+
+[[language]]
+name = "spade"
+language-servers = ["spade-language-server", "wakatime-ls"]
+
+[[language]]
+name = "starlark"
+language-servers = ["starpls", "wakatime-ls"]
+
+[[language]]
+name = "strace"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "supercollider"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "svelte"
+language-servers = ["svelteserver", "wakatime-ls"]
+
+[[language]]
+name = "sway"
+language-servers = ["forc", "wakatime-ls"]
+
+[[language]]
+name = "swift"
+language-servers = ["sourcekit-lsp", "wakatime-ls"]
+
+[[language]]
+name = "systemd"
+language-servers = ["systemd-lsp", "wakatime-ls"]
+
+[[language]]
+name = "teal"
+language-servers = ["teal-language-server", "wakatime-ls"]
+
+[[language]]
+name = "templ"
+language-servers = ["templ", "wakatime-ls"]
+
+[[language]]
+name = "tera"
+language-servers = ["wakatime-ls"]
+
+[[language]]
+name = "tfvars"
+language-servers = ["terraform-ls", "wakatime-ls"]
+
+[[language]]
+name = "toml"
+language-servers = ["taplo", "tombi", "wakatime-ls"]
+
+[[language]]
+name = "tsq"
+language-servers = ["ts_query_lsp", "wakatime-ls"]
+
+[[language]]
+name = "tsx"
+language-servers = ["deno", "eslint", "emmet-ls", "wakatime-ls"]
+
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server", "eslint", "emmet-ls", "wakatime-ls"]
+
+[[language]]
+name = "typespec"
+language-servers = ["typespec", "wakatime-ls"]
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist", "wakatime-ls"]
+
+[[language]]
+name = "v"
+language-servers = ["vlang-language-server", "wakatime-ls"]
+
+[[language]]
+name = "vala"
+language-servers = ["vala-language-server", "wakatime-ls"]
+
+[[language]]
+name = "verilog"
+language-servers = ["svlangserver", "wakatime-ls"]
+
+[[language]]
+name = "vhdl"
+language-servers = ["vhdl_ls", "wakatime-ls"]
+
+[[language]]
+name = "vue"
+language-servers = ["volar", "eslint", "wakatime-ls"]
+
+[[language]]
+name = "wat"
+language-servers = ["wasm-language-server", "wakatime-ls"]
+
+[[language]]
+name = "wgsl"
+language-servers = ["wgsl-analyzer", "wakatime-ls"]
+
+[[language]]
+name = "yaml"
+language-servers = ["yaml-language-server", "ansible-language-server", "wakatime-ls"]
+
+[[language]]
+name = "yara"
+language-servers = ["yls", "wakatime-ls"]
+
+[[language]]
+name = "zig"
+language-servers = ["zls", "wakatime-ls"]

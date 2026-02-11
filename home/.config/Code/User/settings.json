@@ -98,5 +98,34 @@
   "python.defaultInterpreterPath": "/bin/python",
   "github.copilot.nextEditSuggestions.enabled": true,
   "lyceumCloud.token": "lk_62975688cb0fe0a2f5106f36871a58459c424f4493bb1339bb78cc444312db57",
-  "makefile.configureOnOpen": true
+  "makefile.configureOnOpen": true,
+  "chat.mcp.gallery.enabled": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "CC72A69D-DA50-42DA-A8E5-FA608423EE5F"
+    }
+  ],
+  "mssql.connections": [
+    {
+      "authenticationType": "AzureMFA",
+      "connectTimeout": 30,
+      "applicationName": "vscode-mssql",
+      "applicationIntent": "ReadWrite",
+      "server": "db-assignment.database.windows.net",
+      "database": "",
+      "user": "Aditya Lohuni - aditya.lohuni@student.wsb.edu.pl",
+      "commandTimeout": 30,
+      "encrypt": "Mandatory",
+      "accountId": "61d8b638-4e75-462f-b173-2b597d8a5c88.9f2eb1a9-d1e7-4d23-bbd6-7c54fca48a30",
+      "email": "aditya.lohuni@student.wsb.edu.pl",
+      "azureAccountToken": "",
+      "expiresOn": 1769626561,
+      "groupId": "CC72A69D-DA50-42DA-A8E5-FA608423EE5F",
+      "id": "35D97236-16D7-445D-B863-50520CA4B341",
+      "password": ""
+    }
+  ]
 }

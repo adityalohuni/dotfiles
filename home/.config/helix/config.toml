@@ -1,0 +1,31 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+# mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+# [editor.file-picker]
+# hidden = false
+
+[editor.lsp]
+enable = true
+
+[keys.normal.C-l]
+l = ":sh zellij run -f -x 5%% -y 5%% --width 90%% --height 90%% -- sh -c \"lazygit && zellij action close-pane\""
+
+
+# ~/.config/helix/config.toml
+[keys.normal.C-y]
+# Open the file(s) in the current window
+y = ":sh zellij run -n Yazi -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/yazi-picker.sh open %{buffer_name}"
+# Open the file(s) in a vertical split
+v = ":sh zellij run -n Yazi -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/yazi-picker.sh vsplit %{buffer_name}"
+# Open the file(s) in a horizontal split
+h = ":sh zellij run -n Yazi -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- bash ~/.config/helix/yazi-picker.sh hsplit %{buffer_name}"
+

@@ -1,6 +1,7 @@
 # ignore machine specific and secrets
 .local/
 .cache/
+.updates_backup/
 env/
 *.env
 secrets/
