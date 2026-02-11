@@ -37,3 +37,8 @@ source ~/.zsh-nvm-lazy-load.plugin.zsh
 # GO Path
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+
+# Cargo path
+export CARGOPATH=$HOME/.cargo
+export PATH=$PATH:$CARGOPATH/bin
